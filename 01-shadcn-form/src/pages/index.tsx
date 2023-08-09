@@ -36,10 +36,18 @@ import { log } from "console";
 import { cn } from "@/lib/utils";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
 type Input = z.infer<typeof registerSchema>;
+
+
+export const metadata: Metadata = {
+  title: "TSX-01: ShadCN Form UI",
+  description: "Project #01: ShadCN Form UI | Built with NextJS",
+};
+
 
 export default function Home() {
   const { toast } = useToast();
